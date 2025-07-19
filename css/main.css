@@ -67,8 +67,9 @@ ul {
 }
 
 img.profile_image {
-    width: 220px;
-    height: 220px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--primary-color);
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
@@ -102,6 +103,9 @@ img.profile_image {
 
 .header .social {
     margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header .social a {
@@ -128,7 +132,14 @@ img.profile_image {
 .nav-links ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+}
+
+.nav-links ul li {
+    padding: 0 1.5rem;
+}
+
+.nav-links ul li:not(:last-child) {
+    border-right: 1px solid var(--border-color);
 }
 
 .nav-links a {
