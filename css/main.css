@@ -1,439 +1,269 @@
-/* Ubuntu, Ubuntu */
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+/* 
+==============================================
+Avicenna-Modern Theme
+==============================================
+*/
+
+/* CSS Variables for easy theming */
+:root {
+    --bg-color: #1a1d24;
+    --primary-color: #272a33;
+    --secondary-color: #3f4350;
+    --font-color: #d4d4d4;
+    --highlight-color: #63a1ff;
+    --header-font-color: #ffffff;
+    --card-bg-color: #272a33;
+    --border-color: #3f4350;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 300;
-  color: #333;
-  line-height: 1.5;
-  font-size: 16px;
-}
-
-a,
-a:hover {
-  color: #a00;
-  text-decoration: none;
-}
-
-html,
-button,
-input,
-select,
-textarea {
-  color: #222;
-}
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-hr {
-  display: none;
-  height: 1px;
-  border: 0;
-  /* border-top: 1px solid #ccc; */
-  margin: 1rem 0;
-  padding: 0;
-}
-
-audio,
-canvas,
-img,
-video {
-  width: 100%;
-  vertical-align: middle;
-}
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-textarea {
-  resize: vertical;
-}
-
-blockquote {
-  margin-left: 1rem;
-  font-style: italic;
-  font-size: 1.4rem;
-  font-family: Georgia, bitstream charter, serif;
-  border-left: 3px solid;
-  border-color: #a00;
-  padding-left: 20px;
-}
-
-blockquote cite {
-  font-size: 70%;
-  opacity: 0.8;
-}
-span {
-    display: block;
-}
-
-a,
-a:hover {
-  color: #a00;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Ubuntu, raleway, sans-serif;
-  line-height: 1.2;
-  color: #330;
-  font-weight: 100;
-  margin-bottom: 15px;
-  margin-top: 20px;
-}
-
-h1 {
-  font-size: 2.75rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.2rem;
-}
-
-h5 {
-  font-weight: 300;
-  font-size: 1rem;
-}
-
-h6 {
-  font-weight: 300;
-  font-size: 0.9rem;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    line-height: 1.6;
+    font-size: 18px;
 }
 
 .container {
-  max-width: 800px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
+
+a {
+    color: var(--highlight-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    color: var(--header-font-color);
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-top: 3rem; }
+h3 { font-size: 1.75rem; color: var(--highlight-color); }
+h4 { font-size: 1.25rem; }
 
 ul {
-  padding-left: 15px;
+    list-style: none;
 }
 
-ul.flat {
-  margin: 0;
-  padding: 0;
+img.profile_image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
 }
 
-ul.flat li {
-  display: inline-block;
-  list-style: none;
-  margin-left: 0;
-}
-
-.prevent-collapse {
-  min-height: 0.1rem;
-}
-
-.page-title {
-  margin: 0;
-}
-
-.smaller {
-  font-size: 70%;
-}
-
-ul {
-  list-style: disc inside;
-}
-
-.introduction ul li {
-  margin-bottom: 10px;
-}
-
-.introduction ul li p {
-  display: inline;
-}
-
-.highlight pre {
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 20px;
-  background-color: #fafafa !important;
-}
-
-.highlight {
-  background: 0 0;
-}
-
-.wrapper {
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.container {
-  margin-top: 50px;
-}
-
+/* Header */
 .header {
-  margin-bottom: 20px;
-  /* padding-bottom: 20px; */
+    text-align: center;
+    padding: 4rem 0;
 }
 
-.header .profile_image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 30%;
-  height: auto;
-  border-radius: 50%;
-  /* float: left; */
-}
-
-.header h1,
-.header h2 {
-  margin: 0;
-  padding: 0;
-  font-size: 2rem;
-  line-height: 1.3em;
-}
-
-.header h2 {
-  font-size: 1.125rem;
-}
-
-.header nav {
-  margin-top: 20px;
-  /* border-top: 1px solid #f4f4f4; */
-}
-
-.header nav ul,
-.header nav li {
-  margin: 0;
-}
-
-.header nav ul.flat {
-  padding: 0;
-}
-
-.header nav ul.flat li {
-  display: inline-block;
-  list-style: none;
-  margin-left: 0;
-  margin-right: 10px;
-  margin-top: 10px;
-  text-transform: capitalize;
+.header .site-title {
+    margin-bottom: 0.5rem;
 }
 
 .header .site-affilation {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header .site-affilation .email {
-  /* color: #a00; */
-  font-size: 14px;
-  display: block;
-  font-family: "Ubuntu Mono";
-  font-weight: bolder;
+    font-size: 1.1rem;
+    color: var(--font-color);
 }
 
 .header .site-affilation .position {
-  /* color: #a00; */
-  /* font-size: 14px; */
-  /* display: block; */
-  font-family: Ubuntu;
-  /* font-weight: bolder; */
+    display: block;
 }
 
-.header .site-affilation nav {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-.header .site-affilation nav ul svg {
-  max-height: 15px;
-}
-
-/* header for projects */
-.header .logo {
-  display: block;
-  margin-top: 2%;
-  margin-bottom: -2%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 10%;
-  height: auto;
-}
-
-.page_title {
-  font-family: Ubuntu;
-  font-weight: bolder;
-  font-size: 1.5em;
-  margin-top: 10%;
-  display: block;
-}
-
-.page_meta {
-  display: block;
-  font-family: "Ubuntu Mono";
-  font-size: 14px;
-}
-
-.page_meta_icon {
-  font-weight: .5em;
-}
-
-.email {
-  /* color: #a00; */
-  font-size: 16px;
-  font-family: "Ubuntu Mono";
-  font-weight: bolder;
-}
-
-.collaborators {
-  font-size: 15px;
-  margin-left: .9em;
-  margin-top: .1em;
-}
-
-.year {
-  font-size: 20px;
-  margin-bottom: -.6em;
-}
-
-.project {
-  margin: .5em -.5em 0em;
-}
-
-.publications {
-  margin-left: -.5em;
-}
-
-.code_blog {
-    font-family: "Ubuntu Mono";
-    font-size: 14px;
-    margin: 0em .9em 0em;
-}
-
-.blog_cv {
-    font-family: "Ubuntu Mono";
-    font-size: 17px;
-    /* margin: 0em .9em 0em; */
-}
-
-.project_description {
- margin: .5em .9em 0em;
-}
-
-.section .section-header {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #999;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.recent-posts .posts .introduction {
-  margin-bottom: 30px;
-}
-
-.recent-posts .posts .introduction .meta,
-.introduction .introduction-header .meta,
-.list .posts .introduction .meta {
-  font-size: 0.725rem;
-  color: #999;
-  margin-bottom: 4px;
-}
-
-.introduction .introduction-header {
-  margin-bottom: 30px;
-}
-
-.introduction .introduction-header .title {
-  margin: 0;
-}
-
-.introduction .introduction-header .meta {
-  padding-left: 5px;
-  margin-top: 10px;
-}
-
-.list .posts .introduction .meta {
-  margin-bottom: 0;
-  margin-left: 5px;
-}
-
-.footer {
-  text-align: right;
-  font-size: 0.75em;
-  color: #999;
-  border-top: 1px solid #f4f4f4;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-.page-title {
-  margin-bottom: 0;
-}
-
-.tag-cloud {
-  margin-top: 20px;
-}
-
-.tag-cloud a {
-  margin-right: 15px;
-}
-
-
-
-@media (max-width: 767px) {
-  body {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-  }
-
-  h4 {
+.header .site-affilation .email {
+    font-family: 'Ubuntu Mono', monospace;
     font-size: 1rem;
-  }
-
-  .container {
-    margin-top: 10px;
-  }
+    opacity: 0.8;
 }
 
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
+.header .social {
+    margin-top: 1.5rem;
+}
+
+.header .social a {
+    margin: 0 12px;
+    color: var(--font-color);
+}
+
+.header .social a:hover {
+    color: var(--highlight-color);
+}
+
+/* Navigation */
+.nav-links {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.content-section:last-of-type {
+    border-bottom: none;
+}
+
+#about p {
+    margin-bottom: 1.5rem;
+}
+
+/* Projects Section */
+#projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card .project-description {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.project-card .project-links a {
+    font-family: 'Ubuntu Mono', monospace;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Recommendations Section */
+#recommendations .recommendation-item {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--highlight-color);
+    margin-bottom: 1.5rem;
+}
+
+#recommendations .recommendation-item h4 a {
+	color: var(--highlight-color);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+#recommendations .recommendation-item h4 a:hover {
+	color: #ffffff;
+}
+
+#recommendations .recommendation-type-title {
+	border-bottom: 1px solid var(--border-color);
+	padding-bottom: 0.5rem;
+	margin-bottom: 1.5rem;
+	font-size: 1.5rem;
+}
+
+.book-card {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.book-cover {
+	width: 100px;
+	height: auto;
+	border-radius: 4px;
+}
+
+.book-details p {
+	font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+/* Utility */
+.flat {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.flat li {
+    display: inline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+
+    .nav-links {
+        position: static;
+        border-radius: 0;
+    }
 }
